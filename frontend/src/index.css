@@ -1,0 +1,308 @@
+.primaryColor {
+ background-color: #FEF3E2;
+}
+
+.secondaryColor {
+    background-color: #BEC6A0;
+}
+
+.tirtiryColor {
+    background-color: #708871;
+}
+
+.tirtiryColorTrans {
+    background-color: #70887171;
+}
+
+.fourthColor {
+    background-color: #606676;
+}
+
+body {
+    display: block;
+    margin: auto;
+    background-color: #fef3e25f;
+}
+
+
+nav {
+    height: 50px;
+    width: 100vw;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 0 1px 30px 3px #708871;
+
+}
+
+.NavContainer {
+    width:fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Vertical */
+    margin: 0 10px;
+}
+    .NavLeft {
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+        color: #FEF3E2;
+        margin-left: 30px;
+    }
+
+    /* Toggle switch */
+    .toggle-switch {
+        background:aliceblue; /* Default gradient (left to right) */
+        width: 60px;
+        height: 60%;
+        border-radius: 14px;
+        display: flex;
+        margin: 0 15px;
+        cursor: pointer;
+        transition: background 2s ease-in-out; /* Smooth background transition */
+    }
+    .toggle-switch:hover {
+        background: linear-gradient(to right, #03a8f47c, #6200eaa9); /* Color gradient change on hover */
+        transition: background 1s ease-in-out;
+    }
+    
+    /* Toggle circle */
+    .toggle-switch::before {
+        content: '';
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: white;
+        position: relative;
+        top: 2px;
+        left: 2px;
+        transition: transform 0.4s ease-in-out;
+    }
+
+
+    .toggleImg {
+        width: 27px;
+        object-fit: cover;
+        margin: 2px;
+        border-radius: 7px;
+    }
+
+    .AddIcon:hover {
+        background-color: #BEC6A0;
+    }
+
+
+
+
+/* Friends Container */
+.friendsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top:50px;
+    width:90vw;
+    margin: auto;
+    height: auto;
+    padding: 10px 5px;
+    overflow: auto;
+}
+
+/* Friends Card */
+.FrdCard {
+    margin: 10px;
+    width: 85vw;
+    max-width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.CardTop {
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+}
+
+.CardTopContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+}
+
+.CardTopContainer button {
+    height: 35px;
+    width: 35px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.384);
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 1s;
+    
+}
+.EditIcon {
+    object-fit: cover;
+    width: 100%;
+}
+
+.CardTopContainer button:hover {
+    background-color: rgba(255, 255, 255, 0.737);
+    transition: 1s;
+}
+
+.CardTopContainer p {
+
+    min-width: 160px;
+    margin: 10px;
+    font-size: .8rem;
+
+}
+
+.CardTopContainer span {
+    font-size: 1.1rem;
+}
+.FrdPic {
+    height: 35px;
+    width: 35px;
+    border-radius:50%;
+    background-color: #FEF3E2;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+/* Add Friend Section */
+.AddFrdOverlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100% ;
+    height:100% ;
+    justify-content: center;
+    justify-items: center;
+    background: rgba(0, 0, 0, 0.5);/* Transparent white background */
+    
+    backdrop-filter: blur(5px); /* Blur effect */
+
+}
+.AddFrdBox {
+    width: 85vw;
+    height: fit-content;
+    padding: 5vw;
+    top: 30%;
+    position: fixed;
+    border-radius: 10px;
+}
+
+.NameRole {
+    display: flex;
+    flex-direction: row;
+}
+
+.genderInput {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input {
+    width: 90%;
+    min-height: 30px;
+    height: fit-content;
+    line-height: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Radio Btn */
+/* Hide the default radio button */
+input[type="radio"] {
+    display: none;
+}
+
+/* Style the custom radio container */
+.custom-radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+   
+}
+
+/* Create the custom radio button circle */
+.radio-mark {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #6200ea;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    background-color: transparent;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Add the dot inside when checked */
+input[type="radio"]:checked + .radio-mark {
+    background-color: #6200ea;
+    border-color: #6200ea;
+}
+
+input[type="radio"]:checked + .radio-mark::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hover effect */
+.custom-radio:hover .radio-mark {
+    border-color: #3700b3;
+}
+
+
+.AddFrdBtnContainer {
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    float: right;
+}
+
+.AddFrdBtnContainer button {
+    width: 40%;
+    margin: 20px 15px 0 15px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #BEC6A0;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .AddFrdBox {
+        width: 510px;
+        height: fit-content;
+        padding: 30px;
+        top: 40%;
+        position: fixed;
+        border-radius: 10px;
+    }
+
+    .friendsContainer {
+        justify-content: flex-start;
+    }
+}
