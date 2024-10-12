@@ -3,11 +3,13 @@
 }
 
 .secondaryColor {
-    background-color: #BEC6A0;
+    /* background-color: #BEC6A0; */
+    background-color: #4E4E4E;;
 }
 
 .tirtiryColor {
-    background-color: #708871;
+    /* background-color: #708871; */
+    background-color: #223623;
 }
 
 .tirtiryColorTrans {
@@ -18,10 +20,29 @@
     background-color: #606676;
 }
 
+:root {
+    --body_background: #FEF3E2;
+    --body_color: black;
+    --nav_color: #708871;
+    --box_background:#BEC6A0;
+}
+
+[data-theme="dark"] {
+    --body_background: #2E2E2E;
+    --body_color: #dadada;
+    --nav_color: #223623;
+    --box_background: #4E4E4E;
+}
+
+* {
+    transition: all 0.4s ease-in-out;
+}
+
 body {
     display: block;
     margin: auto;
-    background-color: #fef3e25f;
+    color: var(--body_color);
+    background-color: var(--body_background);
 }
 
 
@@ -33,7 +54,8 @@ nav {
     justify-content: space-between;
     position: fixed;
     z-index: 1;
-    box-shadow: 0 1px 30px 3px #708871;
+    background-color: var(--nav_color);
+    box-shadow: 0 1px 30px 3px #0d100d;
 
 }
 
@@ -52,36 +74,9 @@ nav {
     }
 
     /* Toggle switch */
-    .toggle-switch {
-        background:aliceblue; /* Default gradient (left to right) */
-        width: 60px;
-        height: 60%;
-        border-radius: 14px;
-        display: flex;
-        margin: 0 15px;
-        cursor: pointer;
-        transition: background 2s ease-in-out; /* Smooth background transition */
-    }
-    .toggle-switch:hover {
-        background: linear-gradient(to right, #03a8f47c, #6200eaa9); /* Color gradient change on hover */
-        transition: background 1s ease-in-out;
-    }
     
-    /* Toggle circle */
-    .toggle-switch::before {
-        content: '';
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
-        background-color: white;
-        position: relative;
-        top: 2px;
-        left: 2px;
-        transition: transform 0.4s ease-in-out;
-    }
-
-
     .toggleImg {
+        /* Add Friend button */
         width: 27px;
         object-fit: cover;
         margin: 2px;
@@ -91,6 +86,91 @@ nav {
     .AddIcon:hover {
         background-color: #BEC6A0;
     }
+
+    /* From Uiverse.io by juanpabl0svn */ 
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 1.5em;
+    cursor: pointer;
+    margin: 30px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5494de;
+    transition: 0.5s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 15px -4px 0px 15px #efdf2b, 0 0 10px 0px #efdf2b;
+    background: var(--nav_color);
+    transition: 0.5s;
+  }
+  
+  .decoration {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    right: 20%;
+    top: 15%;
+    background: #e4f041bc;
+    backdrop-filter: blur(10px);
+    background: white;
+    box-shadow: -12px 0 0 white, -6px 0 0 1.6px white, 5px 15px 0 1px white,
+      1px 17px 0 white, 10px 17px 0 white;}
+  
+  input:checked ~ .decoration {
+    transform: translateX(-20px);
+    height: 3px;
+    width: 3px;
+    background: #e4f041bc;
+    backdrop-filter: blur(10px);
+    box-shadow: -7px 10px 0 #e4f04174, 8px 15px 0 #e5f041e6, -17px 1px 0 #e4f041a3,
+        -20px 10px 0 #e0e77fab, -7px 23px 0 #e4f041ad, -15px 25px 0 #e5f041e6;
+    
+  }
+  
+  input:checked + .slider {
+    --background: #20262c;
+    background-color:var(--nav_color);
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--background);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(140%);
+    box-shadow: inset 8px -3px 4px 1px #ececd9, -8px 4px 19px 1px #dadadad1, 8px -2px 0px -3px var(--nav_color);
+  }
+  
 
 
 
@@ -120,6 +200,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--box_background);
 }
 
 
@@ -201,6 +282,7 @@ nav {
     top: 30%;
     position: fixed;
     border-radius: 10px;
+    background-color: var(--box_background);
 }
 
 .NameRole {
@@ -221,6 +303,7 @@ nav {
     line-height: 20px;
     border: none;
     border-radius: 5px;
+    color: var(--body_color);
 }
 
 /* Radio Btn */

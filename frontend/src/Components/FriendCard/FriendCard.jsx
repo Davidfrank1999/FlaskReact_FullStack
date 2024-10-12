@@ -26,7 +26,7 @@ export default function FriendCard({user,updateContact, updateCallback}) {
     }
     
   return (
-    <div className='FrdCard secondaryColor'>
+    <div className='FrdCard'>
         <div className='CardTop'>
 
             <div className="CardTopContainer TopLeft">

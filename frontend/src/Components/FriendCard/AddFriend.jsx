@@ -71,7 +71,7 @@ export default function AddFriend({closeModal, editUser, updateCallback}) {
   
   return (
     <div className="AddFrdOverlay">
-      <form className="AddFrdBox secondaryColor" >
+      <form className="AddFrdBox" >
         <h3>{updating ? "Edit Friend" : "Add New Friend"}</h3>
         <div className="NameRole">
           <div>

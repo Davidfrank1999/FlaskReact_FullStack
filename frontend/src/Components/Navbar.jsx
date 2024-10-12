@@ -4,10 +4,10 @@ import ToggleSwitch from './ToggleSwitch'
 
 export default function Navbar({openCreatModal}) {
   return (
-    <nav className='tirtiryColor'>
+    <nav>
         <div className='NavContainer'><span className='NavLeft'>Friends database</span></div>
         <div className='NavContainer NavRight'>
-            {/* <ToggleSwitch /> */}
+            <ToggleSwitch />
             <div onClick={openCreatModal}>
             <img src={addIcon} className='toggleImg AddIcon' />
             </div>
