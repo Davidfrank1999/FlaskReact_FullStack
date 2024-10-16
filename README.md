@@ -18,3 +18,12 @@ This dynamic web application is built from scratch, combining the backend power 
 - **Deployment on Render**: The application is hosted and accessible through Render’s free tier.
 
 This project highlights both functional and aesthetic aspects, ensuring a smooth, modern user experience for managing your personal friend database.
+
+
+### Screen shots
+<img src="images/FriendsAppDark.png"  width=500 alt="Friends App Dark mode Screen" heigh=auto >
+<img src="images/FriendsAppLight.png"  width=500 alt="Friends App Light Screen" heigh=auto >
+
+
+<img src="images/FriendsAppMobileDark.png"  width=200 alt="Register Screen" heigh=auto >        <img src="images/FriendsAppMobile.png"  width=200 alt="Register Screen" heigh=auto >
+

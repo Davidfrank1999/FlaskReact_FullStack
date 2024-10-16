@@ -15,7 +15,7 @@ function App() {
   return (
     <>
         <Navbar openCreatModal={openCreatModal} />
-        <Friendsdb isModalOpen={isModalOpen} setIsModelOpen={setIsModelOpen} />
+        <Friendsdb isModalOpen={isModalOpen} setIsModelOpen={setIsModelOpen} openCreatModal={openCreatModal}/>
         
     </>
   )

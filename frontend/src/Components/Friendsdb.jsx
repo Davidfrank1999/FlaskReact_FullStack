@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from 'react'
 import FriendCard from './FriendCard/FriendCard'
 import AddFriend from './FriendCard/AddFriend'
+import AddBlock from './FriendCard/AddBlock'
 import { BASE_URL } from '../App';
 
-export default function Friendsdb({isModalOpen,setIsModelOpen}) {
+export default function Friendsdb({isModalOpen,setIsModelOpen,openCreatModal}) {
   
   const [users, SetUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -55,6 +56,7 @@ export default function Friendsdb({isModalOpen,setIsModelOpen}) {
       {users.map((user) =>(
         <FriendCard key={user.id} user={user} updateContact={openEditModal} updateCallback={fetchUsers}/>
       ))}
+      <AddBlock openCreatModal={openCreatModal}/>
         {isModalOpen && <AddFriend closeModal={closeModal} editUser={currentContact} updateCallback={fetchUsers}/>}
         
     </div>
